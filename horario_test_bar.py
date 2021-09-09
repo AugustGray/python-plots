@@ -12,9 +12,9 @@ ZWorkMOut = [0, 0, 0, 0, 14, 0, 0]
 X_axis = np.arange(len(X))
   
 plt.bar(X_axis, ZWorkOut, 0.4, label = 'Work', color = "#BD93F97F", edgecolor = "#BD93F9", linewidth = '2')
-plt.bar(X_axis, ZWorkIn, 0.4, label = 'Work', color = "white", edgecolor = "white", linewidth = '3')
+plt.bar(X_axis, ZWorkIn, 0.4, color = "white", edgecolor = "white", linewidth = '3')
 plt.bar(X_axis, YSchoolOut, 0.4, label = 'School', color = "#50FA7B7F", edgecolor = "#50FA7B", linewidth = '2')
-plt.bar(X_axis, YSchoolIn, 0.4, label = 'School', color = "white", edgecolor = "white", linewidth = '3')
+plt.bar(X_axis, YSchoolIn, 0.4, color = "white", edgecolor = "white", linewidth = '3')
 plt.bar(X_axis, ZWorkMOut, 0.4, color = "#BD93F97F", edgecolor = "#BD93F9", linewidth = '2')
 plt.bar(X_axis, ZWorkMIn, 0.4, color = "white", edgecolor = "white", linewidth = '3')
   
