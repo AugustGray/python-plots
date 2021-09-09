@@ -1,23 +1,30 @@
-import numpy as np
-from matplotlib import pyplot as plt
+import numpy as np 
+import matplotlib.pyplot as plt 
+  
+X = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sábado','Domingo']
+YSchoolIn = [8,10.5,10.5,8,15,0,0]
+YSchoolOut = [14,14.5,12.5,9.5,17,0,0]
+ZWorkIn = [15,16,16,12,6.5,0,12]
+ZWorkOut = [21.5,21.5,21.5,21.5,14,0,21.5]
+ZWorkMIn = [0, 0, 0, 0, 6.5, 0, 0]
+ZWorkMOut = [0, 0, 0, 0, 14, 0, 0]
+  
+X_axis = np.arange(len(X))
+  
+plt.bar(X_axis, ZWorkOut, 0.4, label = 'Work', color = "#BD93F97F", edgecolor = "#BD93F9", linewidth = '2')
+plt.bar(X_axis, ZWorkIn, 0.4, label = 'Work', color = "white", edgecolor = "white", linewidth = '3')
+plt.bar(X_axis, YSchoolOut, 0.4, label = 'School', color = "#50FA7B7F", edgecolor = "#50FA7B", linewidth = '2')
+plt.bar(X_axis, YSchoolIn, 0.4, label = 'School', color = "white", edgecolor = "white", linewidth = '3')
+plt.bar(X_axis, ZWorkMOut, 0.4, color = "#BD93F97F", edgecolor = "#BD93F9", linewidth = '2')
+plt.bar(X_axis, ZWorkMIn, 0.4, color = "white", edgecolor = "white", linewidth = '3')
+  
+plt.xticks(X_axis, X)
 
-data = {'a':(0,2), 'b': (0.2,.3), 'c': (.1,.3), 'd': (0.3,0.4),'e':(.1,.2),'f':(.1,.4)}
+plt.ylim(6)
 
-width = 0.5 # adjust to your liking
-
-fig, ax = plt.subplots()
-
-for i, values in enumerate(data.values()):
-
-    ymin, ymax = values
-
-    ax.axvspan(xmin=i-width/2, xmax=i+width/2, ymin=ymin,ymax=ymax)
-
-# to illustrate that ranges are properly drawn
-ax.grid(True)
-
-#add ticks 
-ax.set_xticks(np.arange(0,len(data)))    
-ax.set_xticklabels(data.keys())
-
+# plt.xlabel("Days")
+# plt.ylabel("Hours")
+plt.title("Weekly Schedule")
+plt.legend()
+plt.grid()
 plt.show()
