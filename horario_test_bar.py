@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 X = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sábado','Domingo']
 YSchoolIn = [8,10.5,10.5,8,15,0,0]
 YSchoolOut = [14,14.5,12.5,9.5,17,0,0]
-ZWorkIn = [15,16,16,12,6.5,0,12]
-ZWorkOut = [21.5,21.5,21.5,21.5,14,0,21.5]
-ZWorkMIn = [0, 0, 0, 0, 6.5, 0, 0]
-ZWorkMOut = [0, 0, 0, 0, 14, 0, 0]
+ZWorkIn = [16,16,15,15,0,0,12]
+ZWorkOut = [21.5,21.5,21.5,21.5,0,0,21.5]
+ZWorkMIn = [0, 0, 0, 0, 0,6.5, 0]
+ZWorkMOut = [0, 0, 0, 0, 0, 14, 0]
   
 X_axis = np.arange(len(X))
   
